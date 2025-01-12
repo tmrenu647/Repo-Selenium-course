@@ -40,11 +40,18 @@ public class WebelementCommands extends Base {
 		WebElement tagnameSample=driver.findElement(By.tagName("div"));
 		
 		WebElement xpathSample1=driver.findElement(By.xpath("//button[@id='button-one']"));
-		//WebElement xpathSample2=driver.findElement(By.xpath("//text[@id='single-input-field']"));
-		//WebElement xpathSample3=driver.findElement(By.xpath("//text[@id='value-a']"));
+		WebElement xpathSample2=driver.findElement(By.xpath("//input[@id='single-input-field']"));
+		WebElement xpathSample3=driver.findElement(By.xpath("//input[@id='value-a']"));
 		WebElement xpathSample4=driver.findElement(By.xpath("//a[@id='others']"));
 		WebElement xpathSample5=driver.findElement(By.xpath("//a[@href='simple-form-demo.php']"));
 		WebElement xpathSample6=driver.findElement(By.xpath("//button[@id='button-two']"));
+		
+		WebElement xpathSample7=driver.findElement(By.xpath("//button[contains(@id,'button-o')]"));
+		WebElement xpathSample8=driver.findElement(By.xpath("//button[starts-with(@id,'button-o')]"));
+		WebElement xpathSample9=driver.findElement(By.xpath("//button[text()='Show Message']"));
+		//button[contains(text(),'Show Message')]
+		WebElement xpathSample10=driver.findElement(By.xpath("//button[text()='Show Message'and @id=\"button-one\"]"));
+		WebElement xpathSample11=driver.findElement(By.xpath("//button[text()='Show Message' or @id=\"button-three\"]"));
 		
 		
 	}
