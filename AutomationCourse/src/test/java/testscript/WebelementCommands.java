@@ -54,6 +54,10 @@ public class WebelementCommands extends Base {
 		WebElement xpathSample11=driver.findElement(By.xpath("//button[text()='Show Message' or @id=\"button-three\"]"));
 		
 		
+		WebElement xpathSample12=driver.findElement(By.xpath("//button[text()='Show Message' or @id=\"button-three\"]"));
+
+		
+		
 	}
 
 	public static void main(String[] args) {
