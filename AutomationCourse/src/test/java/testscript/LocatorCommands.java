@@ -3,7 +3,7 @@ package testscript;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class WebelementCommands extends Base {
+public class LocatorCommands extends Base {
 	public void Locators()
 	{
 		WebElement showMessageButton=driver.findElement(By.id("button-one"));//To identify webelement(find element), By means locator
@@ -53,15 +53,23 @@ public class WebelementCommands extends Base {
 		WebElement xpathSample10=driver.findElement(By.xpath("//button[text()='Show Message'and @id=\"button-one\"]"));
 		WebElement xpathSample11=driver.findElement(By.xpath("//button[text()='Show Message' or @id=\"button-three\"]"));
 		
+		WebElement xpathSample12 = driver.findElement(By.xpath("//button[@id='button-one']//parent::form"));
+		WebElement xpathSample13 = driver.findElement(By.xpath("//section[@class='clearfix']//child::div[@class='container page']"));
+		WebElement xpathSample14=driver.findElement(By.xpath("//button[@id='button-one']//following::div[@id='message-one']"));
+		WebElement xpathSample15=driver.findElement(By.xpath("//button[@id='button-one']//preceding::div[@class=\'header-top\']"));
+		WebElement xpathSample16=driver.findElement(By.xpath("//button[@id='button-one']//ancestor::div[@class=\'container page\']"));
+		WebElement xpathSample17=driver.findElement(By.xpath("//button[@id='button-one']//following-sibling::div"));
 		
-		WebElement xpathSample12=driver.findElement(By.xpath("//button[text()='Show Message' or @id=\"button-three\"]"));
-
 		
+	}
+	
+	public void singleInputField()
+	{
 		
 	}
 
 	public static void main(String[] args) {
-		WebelementCommands webelementcommands=new WebelementCommands();
+		LocatorCommands webelementcommands=new LocatorCommands();
 		webelementcommands.initialiseBrowser();
 		webelementcommands.Locators();
 		webelementcommands.browserQuit();
