@@ -1,7 +1,16 @@
 package testscript;
 
+import java.time.Duration;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebElementsCommands extends Base {
 	
@@ -97,8 +106,17 @@ public class WebElementsCommands extends Base {
         WebElement singleInputField = driver.findElement(By.xpath("//input[@id='single-input-field']"));
         singleInputField.sendKeys(input);
         WebElement showMessage = driver.findElement(By.xpath("//button[@id='button-one']"));
-        showMessage.click();
+        //showMessage.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));// syntax of explicit
+		wait.until(ExpectedConditions.elementToBeClickable(showMessage));//same this is also for syntax complete
 
+
+        JavascriptExecutor js=(JavascriptExecutor)driver;
+        
+        //Scroll
+        js.executeScript("window.scrollBy(0,200)","");//up
+        js.executeScript("window.scrollBy(0,-200)","");//down
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)","");
         WebElement yourMessage = driver.findElement(By.xpath("//div[@id='message-one']"));
 
         String yourMessageText = yourMessage.getText(); // Get message to compare
@@ -122,6 +140,13 @@ public class WebElementsCommands extends Base {
         ValueB.sendKeys(B);
 
         WebElement GetTotal = driver.findElement(By.xpath("//button[@id='button-two']"));
+        
+        Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(3))
+                .ignoring(NoSuchElementException.class);
+		fluentWait.until(ExpectedConditions.elementToBeClickable(GetTotal));
+
         GetTotal.click();
 
         WebElement Total = driver.findElement(By.xpath("//div[@id='message-two']"));
@@ -134,6 +159,8 @@ public class WebElementsCommands extends Base {
             System.out.println("Test Fail");
         }
 	}
+	
+
 		
 		
 	
