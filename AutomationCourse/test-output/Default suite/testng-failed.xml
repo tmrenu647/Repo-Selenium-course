@@ -7,7 +7,7 @@
         <methods>
           <include name="initialiseBrowser"/>
           <include name="browserQuit"/>
-          <include name="backGroundColor"/>
+          <include name="verifyAbleToSelectMaleOption"/>
         </methods>
       </class> <!-- testscript.Assertion -->
     </classes>
