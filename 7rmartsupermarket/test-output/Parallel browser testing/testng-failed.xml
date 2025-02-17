@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Parallel browser testing]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="2" parallel="tests" name="Test1(failed)">
+    <classes>
+      <class name="testscript.LoginTest">
+        <methods>
+          <include name="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndInvalidPassword"/>
+          <include name="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndValidPassword"/>
+          <include name="initialiseBrowser"/>
+          <include name="verifyWhetherUserShouldNotAbleToLoginWithValidUserNameAndInvalidPassword"/>
+          <include name="browserQuit"/>
+          <include name="verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword"/>
+        </methods>
+      </class> <!-- testscript.LoginTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="2" parallel="tests" name="Test2(failed)">
+    <classes>
+      <class name="testscript.LoginTest">
+        <methods>
+          <include name="initialiseBrowser"/>
+          <include name="browserQuit"/>
+          <include name="verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword"/>
+        </methods>
+      </class> <!-- testscript.LoginTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Parallel browser testing] -->

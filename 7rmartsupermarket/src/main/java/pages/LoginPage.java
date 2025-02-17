@@ -11,16 +11,16 @@ public class LoginPage{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}	
-	@FindBy(xpath = "//input[@type='text']") WebElement userNameField;
-	@FindBy(xpath = "//input[@type='password']") WebElement passwordField;	
+	@FindBy(xpath = "//*[@id=\"login-form\"]/div/div/div[1]/input") WebElement userNameField;
+	@FindBy(xpath = "//*[@id=\"login-form\"]/div/div/div[2]/input") WebElement passwordField;	
 	@FindBy(xpath = "//button[@class='btn btn-dark btn-block']") WebElement loginButton;
-	@FindBy(xpath = "//div[contains(@class, 'alert-class-name')]") WebElement tileIsAvailable;
-	@FindBy(xpath = "//div[contains(@class,'alert')]") WebElement alertIsAvailable;
-	public void enterUserNameOnUserNameField(String username){
-		userNameField.sendKeys(username);
+	@FindBy(xpath = "/html/body/div/nav/ul[2]/li/a") WebElement tileIsAvailable;
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")  WebElement alertIsAvailable;
+	public void enterUserNameOnUserNameField(String Username){
+		userNameField.sendKeys(Username);
 	}	
-	public void enterPasswordOnPasswordField(String password){
-		passwordField.sendKeys(password);
+	public void enterPasswordOnPasswordField(String Password){
+		passwordField.sendKeys(Password);
 	}
 	public void clickOnLoginButton(){
 		loginButton.click(); 
