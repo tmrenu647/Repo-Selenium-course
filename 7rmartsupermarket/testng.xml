@@ -7,9 +7,12 @@
 <parameter name="browser" value="Chrome"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testscript.CategoryTest">
+      <class name="testscript.LoginTest">
       <methods>
-      <include name="verifyWheathertheUserCanCreateACategory()"></include>
+      <include name="verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword()"></include>
+      <include name="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndValidPassword()"></include>
+      <include name="verifyWhetherUserShouldNotAbleToLoginWithValidUserNameAndInvalidPassword()"></include>
+      <include name="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndInvalidPassword()"></include>      
       </methods>
       </class>
     </classes>

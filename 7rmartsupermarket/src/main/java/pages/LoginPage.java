@@ -16,14 +16,17 @@ public class LoginPage{
 	@FindBy(xpath = "//button[@class='btn btn-dark btn-block']") WebElement loginButton;
 	@FindBy(xpath = "/html/body/div/nav/ul[2]/li/a") WebElement tileIsAvailable;
 	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")  WebElement alertIsAvailable;
-	public void enterUserNameOnUserNameField(String Username){
-		userNameField.sendKeys(Username);
+	public LoginPage enterUserNameOnUserNameField(String userName1){
+		userNameField.sendKeys(userName1);
+		return this;
 	}	
-	public void enterPasswordOnPasswordField(String Password){
+	public LoginPage enterPasswordOnPasswordField(String Password){
 		passwordField.sendKeys(Password);
+		return this;
 	}
-	public void clickOnLoginButton(){
+	public LoginPage clickOnLoginButton(){
 		loginButton.click(); 
+		return this;
 	}
 	public boolean isDashboardTileAvailable(){
         return tileIsAvailable.isDisplayed();

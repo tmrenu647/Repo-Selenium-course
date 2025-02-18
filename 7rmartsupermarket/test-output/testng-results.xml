@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-17T22:32:18 IST" name="Suite" finished-at="2025-02-17T22:32:25 IST" duration-ms="7130">
+  <suite started-at="2025-02-19T00:33:10 IST" name="Suite" finished-at="2025-02-19T00:33:23 IST" duration-ms="12381">
     <groups>
     </groups>
-    <test started-at="2025-02-17T22:32:18 IST" name="Test" finished-at="2025-02-17T22:32:25 IST" duration-ms="7130">
-      <class name="testscript.CategoryTest">
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.CategoryTest@2f953efd]" started-at="2025-02-17T22:32:18 IST" name="initialiseBrowser" finished-at="2025-02-17T22:32:22 IST" duration-ms="4787" status="PASS">
+    <test started-at="2025-02-19T00:33:10 IST" name="Test" finished-at="2025-02-19T00:33:23 IST" duration-ms="12381">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:10 IST" name="initialiseBrowser" finished-at="2025-02-19T00:33:13 IST" duration-ms="3037" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,59 +18,100 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="verifyWheathertheUserCanCreateACategory()[pri:0, instance:testscript.CategoryTest@2f953efd]" started-at="2025-02-17T22:32:22 IST" name="verifyWheathertheUserCanCreateACategory" description="check the user can create a new category" finished-at="2025-02-17T22:32:25 IST" duration-ms="2160" status="FAIL">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-Faker cannot be resolved to a type
-Faker cannot be resolved to a type
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-Faker cannot be resolved to a type
-Faker cannot be resolved to a type
-
-at utilities.RandomUtility.createCategoryName(RandomUtility.java:29)
-at pages.CategoryPage.enterCategoryName(CategoryPage.java:51)
-at testscript.CategoryTest.verifyWheathertheUserCanCreateACategory(CategoryTest.java:25)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+        <test-method signature="verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword()[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:13 IST" name="verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword" description=" verify whether user is able to Login with valid username and password" finished-at="2025-02-19T00:33:15 IST" duration-ms="1555" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWheathertheUserCanCreateACategory -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.CategoryTest@2f953efd]" started-at="2025-02-17T22:32:25 IST" name="browserQuit" finished-at="2025-02-17T22:32:25 IST" duration-ms="125" status="PASS">
+        </test-method> <!-- verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:15 IST" name="browserQuit" finished-at="2025-02-19T00:33:15 IST" duration-ms="263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword status=SUCCESS method=LoginTest.verifyWheatherTheUserIsAbleToNavigateToTheHomePageafterEnterCorrectUserNameANDPassword()[pri:0, instance:testscript.LoginTest@28cda624] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.CategoryTest -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:15 IST" name="initialiseBrowser" finished-at="2025-02-19T00:33:17 IST" duration-ms="1841" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndValidPassword()[pri:1, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:17 IST" name="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndValidPassword" description="Verify whether user should not able to Login with a invalid username and valid password" finished-at="2025-02-19T00:33:17 IST" duration-ms="469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndValidPassword -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:17 IST" name="browserQuit" finished-at="2025-02-19T00:33:18 IST" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndValidPassword status=SUCCESS method=LoginTest.verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndValidPassword()[pri:1, instance:testscript.LoginTest@28cda624] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:18 IST" name="initialiseBrowser" finished-at="2025-02-19T00:33:19 IST" duration-ms="1717" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="verifyWhetherUserShouldNotAbleToLoginWithValidUserNameAndInvalidPassword()[pri:2, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:19 IST" name="verifyWhetherUserShouldNotAbleToLoginWithValidUserNameAndInvalidPassword" description="Verify whether user should not able to Login with a valid username and invalid password" finished-at="2025-02-19T00:33:20 IST" duration-ms="514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserShouldNotAbleToLoginWithValidUserNameAndInvalidPassword -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:20 IST" name="browserQuit" finished-at="2025-02-19T00:33:20 IST" duration-ms="353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserShouldNotAbleToLoginWithValidUserNameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWhetherUserShouldNotAbleToLoginWithValidUserNameAndInvalidPassword()[pri:2, instance:testscript.LoginTest@28cda624] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:20 IST" name="initialiseBrowser" finished-at="2025-02-19T00:33:22 IST" duration-ms="1745" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndInvalidPassword()[pri:3, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:22 IST" name="verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndInvalidPassword" description="Verify whether user should not able to Login with an invalid username and invalid password" finished-at="2025-02-19T00:33:22 IST" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndInvalidPassword -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@28cda624]" started-at="2025-02-19T00:33:22 IST" name="browserQuit" finished-at="2025-02-19T00:33:23 IST" duration-ms="208" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWhetherUserShouldNotAbleToLoginWithInvalidUserNameAndInvalidPassword()[pri:3, instance:testscript.LoginTest@28cda624] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+      </class> <!-- testscript.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
